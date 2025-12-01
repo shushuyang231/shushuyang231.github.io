@@ -5,3 +5,6 @@ collection: portfolio
 ---
 
 [点击下载我的项目详细报告 (cpp)](/files/main.cpp)
+[点击下载我的项目详细报告 (cpp)](/files/autonomous.cpp)
+[点击下载我的项目详细报告 (cpp)](/files/controller.cpp)
+[点击下载我的项目详细报告 (cpp)](/files/usercontrol.cpp)
