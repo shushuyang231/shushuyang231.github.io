@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a **first year undergraduate** from [SJTU Paris Elite Institute of Technology, SPEIT](https://speit.sjtu.edu.cn/) ,[Shanghai Jiaotong University](https://www.sjtu.edu.cn/)majoring in primary French and a bit math&physics.
+I am a **first year undergraduate** from [SJTU Paris Elite Institute of Technology](https://speit.sjtu.edu.cn/) ,[Shanghai Jiaotong University](https://www.sjtu.edu.cn/)majoring in primary French and a bit math&physics.
 Ce site web sert de plateforme pour documenter mes projets de recherche, mes publications (le cas échéant) et mes activités universitaires, offrant un aperçu de mes domaines d'expertise et de mes contributions.
 
 如果您对我的学习经历感兴趣，或者有任何建议，欢迎通过侧边栏的联系方式与我交流。
