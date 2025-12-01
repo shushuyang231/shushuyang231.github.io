@@ -20,6 +20,6 @@ Ce site web sert de plateforme pour documenter mes projets de recherche, mes pub
     * 时间：2025 - 至今 
 ## 🌟 兴趣领域 (Research Interests)
 
-*vocaloid以及so-vits-svc音乐制作相关
+* vocaloid以及so-vits-svc音乐制作相关
 * 部分通晓vibe coding
 
