@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "VEX比赛中pushback题目中的操控代码"
+excerpt: "该cpp文件是在其他队员以及ai帮助下完成的适用于部署了vex环境的机器人控制主要代码"
 collection: portfolio
 ---
 
