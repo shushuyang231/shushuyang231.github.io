@@ -4,4 +4,4 @@ excerpt: "该cpp文件是在其他队员以及ai帮助下完成的适用于部�
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+[点击下载我的项目详细报告 (cpp)](/files/main.cpp)
