@@ -22,4 +22,4 @@ Ce site web sert de plateforme pour documenter mes projets de recherche, mes pub
 
 * vocaloid以及so-vits-svc音乐制作相关
 * 部分通晓vibe coding
-
+* 战前（时）日本，冷战时期苏联，欧洲，朝鲜，美国相关勋赏
