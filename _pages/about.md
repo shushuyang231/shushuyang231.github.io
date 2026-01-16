@@ -17,8 +17,9 @@ Ce site web sert de plateforme pour documenter mes projets de recherche, mes pub
 
 * **本科 (Undergraduate)** - [上海交通大学 (SJTU)](https://www.sjtu.edu.cn/)
     * 学院：[巴黎卓越工程师学院 (SPEIT)](https://speit.sjtu.edu.cn/)
-    * 时间：2025 - 至今 
-## 🌟 兴趣领域 (Research Interests)
+    * 时间：2025 - 至今
+
+* ## 🌟 兴趣领域 (Research Interests)
 
 * vocaloid以及so-vits-svc音乐制作相关
 * 部分通晓vibe coding
