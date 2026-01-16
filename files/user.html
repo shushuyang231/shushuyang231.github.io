@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RPG Letter - Final Fixed Version</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        /* 配色方案 */
+        --deep-blue: #1d2b53;
+        --sea-blue: #29adff;
+        --sand-yellow: #ffd93f;
+        --sunset-orange: #ff8426;
+        --paper-bg: #f4e7c3;
+        --text-color: #2c1e1a; 
+        --cn-text-color: #6d4c41; 
+        --border-color: #8b4513;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'VT323', 'Noto Sans SC', sans-serif;
+        background-color: var(--deep-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 背景 */
+    .pixel-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: 
+            linear-gradient(to bottom, var(--deep-blue) 0%, transparent 60%),
+            linear-gradient(to top, var(--sand-yellow) 0%, var(--sunset-orange) 30%, var(--sea-blue) 70%, var(--deep-blue) 100%);
+        image-rendering: pixelated;
+        filter: blur(8px) contrast(1.2);
+        transform: scale(1.1);
+    }
+
+    /* --- 1. 引导页面样式 --- */
+    #landing-screen {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(29, 43, 83, 1); /* 初始完全不透明 */
+        z-index: 200; /* 最高层级 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--sand-yellow);
+        text-shadow: 4px 4px 0px #000;
+        cursor: pointer;
+        transition: opacity 1s ease-out; /* 淡出动画 */
+    }
+    
+    #landing-screen h1 {
+        font-size: 5rem;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .click-hint {
+        font-size: 2rem;
+        animation: blink 1s infinite steps(2, start);
+        color: #fff;
+    }
+
+    /* --- 2. 信纸容器 (始终恒定大小) --- */
+    .letter-container {
+        position: relative;
+        /* 核心：固定宽高，不随内容撑开 */
+        width: 85%;
+        max-width: 800px;
+        height: 80vh; 
+        
+        background-color: var(--paper-bg);
+        border: 4px solid var(--border-color);
+        box-shadow: 
+            0 0 0 4px var(--paper-bg),
+            0 0 0 8px var(--border-color),
+            15px 15px 0px rgba(0,0,0,0.4);
+        padding: 40px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex; /* 这里只是为了布局内部 */
+        flex-direction: column;
+        overflow-y: auto; 
+        scroll-behavior: smooth;
+        
+        /* 即使被遮挡，它也在那里，保持大小 */
+        z-index: 10; 
+    }
+
+    /* 滚动条样式 */
+    .letter-container::-webkit-scrollbar { width: 12px; background: var(--paper-bg); }
+    .letter-container::-webkit-scrollbar-thumb { background: var(--border-color); border: 2px solid var(--paper-bg); }
+
+    /* 段落样式块 */
+    .paragraph-block {
+        margin-bottom: 35px;
+        line-height: 1.5;
+        opacity: 0;
+        animation: fadeInBlock 0.5s forwards;
+    }
+
+    @keyframes fadeInBlock { to { opacity: 1; } }
+
+    .fr-text { font-size: 1.6rem; color: var(--text-color); display: block; margin-bottom: 8px; }
+    .cn-text { font-size: 1.1rem; color: var(--cn-text-color); display: block; font-weight: bold; opacity: 0.9; line-height: 1.6; }
+
+    /* 闪烁光标 */
+    #cursor-fixed {
+        position: fixed;
+        bottom: calc(10vh + 40px);
+        right: max(10%, calc(50vw - 360px));
+        font-size: 2rem;
+        color: var(--border-color);
+        animation: blink 0.8s infinite steps(2, start);
+        z-index: 20;
+        pointer-events: none;
+        display: none; 
+    }
+
+    @keyframes blink { to { opacity: 0; } }
+
+    /* 结局画面 */
+    .ending-screen {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(29, 43, 83, 0.96);
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--sand-yellow);
+        text-shadow: 3px 3px 0px #000;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .ending-screen h1 { font-size: 4rem; margin-bottom: 20px; }
+    .ending-screen p { font-size: 2rem; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* 手机适配 */
+    @media (max-width: 600px) {
+        #landing-screen h1 { font-size: 3rem; }
+        .letter-container { width: 92%; padding: 20px; height: 75vh; }
+        .fr-text { font-size: 1.3rem; }
+        .cn-text { font-size: 1rem; }
+        #cursor-fixed { bottom: 13vh; right: 20px; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="pixel-background"></div>
+
+    <div id="landing-screen" onclick="startGame()">
+        <h1>UNE LETTRE</h1>
+        <div class="click-hint">> CLICK TO START <</div>
+    </div>
+
+    <div class="letter-container" id="dialog-box" onclick="handleInteraction()">
+        <div id="content-area"></div>
+    </div>
+
+    <div id="cursor-fixed">▼</div>
+
+    <div class="ending-screen" id="end-screen">
+        <h1>THE END</h1>
+        <p>To be continued in 2026...</p>
+    </div>
+
+<script>
+    const letterData = [
+        { fr: "À WSQ :", cn: "致 WSQ：" },
+        { fr: "Bonne journée ! Je pense beaucoup à toi.", cn: "祝你今天愉快！我很想你。" },
+        { fr: "Cela fait maintenant plus de 2 ans que nous nous connaissons.", cn: "我们认识已经两年多了。" },
+        { fr: "J'ai passé beaucoup de bons moments avec toi. Je n'oublie pas les moments à l'école, pendant les pauses de dix minutes, où nous parlions toujours dans le couloir.", cn: "我和你度过了许多美好的时光。我忘不了在学校的那些时刻，在十分钟的课间休息时，我们总是在走廊里聊天。" },
+        { fr: "Je n'oublie pas la fois où je t'ai prise en photo pendant le cours de chinois, mais je n'avais pas éteint le flash, donc tu t'es fâchée contre moi (je suis désolé... Mais je pense que c'est le moment parfait pour développer les pellicules pendant ces vacances).", cn: "我也忘不了我在语文课上偷拍你的那次，但我忘了关闪光灯，结果你生我的气了（我很抱歉……但这假期我想正是冲洗那些胶卷的完美时机）。" },
+        { fr: "Il y a quinze jours, je suis allé te voir à Pékin (Beijing). C'était incroyable, nous avons passé du temps ensemble – dans le lit, à la galerie... Je suis très content de t'avoir retrouvée.", cn: "半个月前，我去北京找你。那真是太棒了，我们一起度过了时光——在床上，在画廊……很高兴能重逢。" },
+        { fr: "Je pense que je ne vais pas oublier ça. Quel bonheur !", cn: "我想我不会忘记这些。多么幸福啊！" },
+        { fr: "Je suis très heureux de te connaître. Je voudrais passer plus de temps avec toi cette nouvelle année.", cn: "很高兴认识你。希望在新的一年里能和你共度更多时光。" },
+        { fr: "Bisous,", cn: "吻你，" },
+        { fr: "Ton ami, 孙圣尧", cn: "你的朋友，孙圣尧" },
+        { fr: "Le cinq janvier 2026.", cn: "2026年1月5日。" }
+    ];
+
+    let currentParaIndex = 0;
+    let charIndex = 0;
+    let isTypingFr = true;
+    let isTyping = false;
+    let typingSpeed = 35;
+    let typingTimeout;
+    let gameStarted = false; // 游戏是否开始的状态
+
+    const contentArea = document.getElementById('content-area');
+    const dialogBox = document.getElementById('dialog-box');
+    const cursor = document.getElementById('cursor-fixed');
+    const endScreen = document.getElementById('end-screen');
+    const landingScreen = document.getElementById('landing-screen');
+
+    let currentParaDiv = null;
+    let currentFrSpan = null;
+    let currentCnSpan = null;
+
+    // 游戏开始逻辑
+    function startGame() {
+        if (gameStarted) return; // 防止重复点击
+        gameStarted = true;
+
+        // 隐藏引导页
+        landingScreen.style.opacity = '0';
+        
+        // 动画结束后移除引导页DOM，并开始打字
+        setTimeout(() => {
+            landingScreen.style.display = 'none';
+            startNextParagraph();
+        }, 1000);
+    }
+
+    function startNextParagraph() {
+        if (currentParaIndex >= letterData.length) {
+            cursor.style.display = 'none';
+            setTimeout(() => {
+                dialogBox.style.display = 'none';
+                endScreen.style.display = 'flex';
+            }, 1000);
+            return;
+        }
+
+        currentParaDiv = document.createElement('div');
+        currentParaDiv.className = 'paragraph-block';
+        
+        currentFrSpan = document.createElement('span');
+        currentFrSpan.className = 'fr-text';
+        currentParaDiv.appendChild(currentFrSpan);
+
+        currentCnSpan = document.createElement('span');
+        currentCnSpan.className = 'cn-text';
+        currentParaDiv.appendChild(currentCnSpan);
+
+        contentArea.appendChild(currentParaDiv);
+        
+        charIndex = 0;
+        isTypingFr = true;
+        isTyping = true;
+        cursor.style.display = 'none';
+
+        typeWriter();
+    }
+
+    function typeWriter() {
+        const currentData = letterData[currentParaIndex];
+        let textToType = isTypingFr ? currentData.fr : currentData.cn;
+        let targetSpan = isTypingFr ? currentFrSpan : currentCnSpan;
+
+        if (charIndex < textToType.length) {
+            targetSpan.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            dialogBox.scrollTop = dialogBox.scrollHeight;
+            typingTimeout = setTimeout(typeWriter, typingSpeed);
+        } else {
+            if (isTypingFr) {
+                isTypingFr = false;
+                charIndex = 0;
+                typingTimeout = setTimeout(typeWriter, 100);
+            } else {
+                isTyping = false;
+                cursor.style.display = 'block';
+                dialogBox.scrollTop = dialogBox.scrollHeight;
+            }
+        }
+    }
+
+    function handleInteraction() {
+        if (!gameStarted) return; // 还没开始游戏，点击信纸无效
+        if (currentParaIndex >= letterData.length) return;
+
+        if (isTyping) {
+            clearTimeout(typingTimeout);
+            
+            const currentData = letterData[currentParaIndex];
+            currentFrSpan.textContent = currentData.fr;
+            currentCnSpan.textContent = currentData.cn;
+            
+            isTyping = false;
+            cursor.style.display = 'block';
+            dialogBox.scrollTop = dialogBox.scrollHeight;
+        } else {
+            currentParaIndex++;
+            startNextParagraph();
+        }
+    }
+
+    // 以前是 window.onload 自动开始，现在不需要了，等待点击 startGame
+</script>
+
+</body>
+</html>
