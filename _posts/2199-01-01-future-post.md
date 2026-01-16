@@ -1,7 +1,7 @@
 ---
 title: '给你的纪念网页'
 date: 2026-01-16
-permalink: /future-post/
+permalink: /une lettre/
 tags:
   - letter
 ---
