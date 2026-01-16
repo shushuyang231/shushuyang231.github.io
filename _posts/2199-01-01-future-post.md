@@ -1,6 +1,6 @@
 ---
 title: '给你的纪念网页'
-date: 2199-01-01
+date: 2026-01-16
 permalink: /future-post/
 tags:
   - letter
