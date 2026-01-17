@@ -1,15 +1,11 @@
 ---
-title: '给你的纪念网页'
+title: 'une tombe'
 date: 2026-01-16
-permalink: /une lettre/
+permalink: /une tombe/
 tags:
   - letter
 ---
 
-一个作为附件的小礼物。
+C'est une tombe pour une histoire au 16/3/2024 du 17/1/2026
 
 **Date:** 2026-01-16
-
-请在电脑上操作，点击下方链接并在新标签页中打开：
-
-[🎮 点击这里直达网页](https://shushuyang231.github.io/files/user.html)
