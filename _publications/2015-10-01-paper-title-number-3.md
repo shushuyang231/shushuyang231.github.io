@@ -1,13 +1,13 @@
 ---
-title: "Paper Title Number 3"
+title: "llmchat发布页"
 collection: publications
-category: manuscripts
+category: application
 permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
+excerpt: 'an app.'
+date: 2026-02-24
 venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
+slidesurl: 'https://shushuyang231.github.io/files/authenticat.apk'
+paperurl: 'https://shushuyang231.github.io/files/authenticat.apk'
 citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
 ---
 
