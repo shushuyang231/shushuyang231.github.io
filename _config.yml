@@ -23,7 +23,7 @@ repository               : "shushuyang231/shushuyang231.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile2.png"
+  avatar           : "profile.png"
   name             : "孙圣尧 (Sun Shengyao)"
   pronouns         : "he/his"
   bio              : "First-year undergraduate at SJTU SPEIT · LLM evaluation & empirical software engineering"
