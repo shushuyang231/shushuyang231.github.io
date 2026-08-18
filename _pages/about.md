@@ -26,12 +26,11 @@ Beyond LLMs, I am also interested in **embodied intelligence, robotics, and mech
   * School: [Paris Elite Institute of Technology (SPEIT)](https://speit.sjtu.edu.cn/)（巴黎卓越工程师学院）
   * 2025 – Present, Shanghai, China
 
-## Research Interests | 研究方向
+## Areas of Interest | 兴趣领域
 
-* LLM agent evaluation and benchmarking（LLM 智能体评测）
-* Empirical software engineering: mutation testing, oracle calibration（实证软件工程）
-* Robustness of LLM-generated structured outputs（结构化输出鲁棒性）
+* Large language models（大语言模型）
 * Embodied intelligence and robotics（具身智能与机器人学）
+* Mechanical systems（机械）
 
 ## Beyond Research | 研究之外
 

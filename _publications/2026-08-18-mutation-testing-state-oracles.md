@@ -1,6 +1,7 @@
 ---
 title: "Mutation Testing of Task-Scoped State Oracles in Software-Agent Benchmarks: A Cross-Benchmark Empirical Study"
 collection: publications
+category: manuscripts
 permalink: /publication/2026-08-18-mutation-testing-state-oracles
 excerpt: 'A cross-benchmark empirical study applying mutation testing to task-scoped state oracles to calibrate the reliability of software-agent benchmarks.'
 date: 2026-08-18

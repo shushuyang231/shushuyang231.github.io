@@ -1,6 +1,7 @@
 ---
 title: "Testing JSON Schema Instruction Artifacts: Distributional Robustness under Validation-Equivalent Serialization and JSON Mode"
 collection: publications
+category: manuscripts
 permalink: /publication/2026-08-12-schema-serialization-robustness
 excerpt: 'An empirical study of how validation-equivalent JSON Schema serialization order affects black-box LLM generation, with practical guidelines for schema design.'
 date: 2026-08-12

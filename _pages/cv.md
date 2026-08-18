@@ -15,21 +15,15 @@ Education | 教育背景
   * Paris Elite Institute of Technology (SPEIT)（巴黎卓越工程师学院）
   * French engineering curriculum: mathematics, physics, and computer science
 
-Research Interests | 研究方向
+Areas of Interest | 兴趣领域
 ======
-* LLM agent evaluation and benchmarking（LLM 智能体评测）
-* Empirical software engineering: mutation testing, state-oracle calibration（实证软件工程）
-* Robustness of LLM-generated structured outputs（结构化输出鲁棒性）
+* Large language models（大语言模型）
 * Embodied intelligence and robotics（具身智能与机器人学）
+* Mechanical systems（机械）
 
 Skills | 技能
 ======
-* Programming
-  * Python, Kotlin (Android / Jetpack Compose), TypeScript (React / Vite), HTML/CSS
-* Research methods
-  * LLM benchmark design, mutation testing
-* Tools
-  * Git, Supabase, Android Studio, Vite
+* Python（初级 / beginner level）
 
 Projects | 项目
 ======
