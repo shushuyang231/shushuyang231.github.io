@@ -2,7 +2,7 @@
 title: "French Study Notes (法语学习笔记)"
 excerpt: "Grammar notes compiled for the SPEIT French curriculum"
 collection: portfolio
-order: 4
+order: 5
 ---
 
 Study notes on French grammar compiled for the French engineering curriculum at SPEIT（巴黎卓越工程师学院法语课程学习笔记）:
