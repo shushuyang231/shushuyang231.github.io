@@ -12,7 +12,7 @@ I am a **first-year undergraduate** at the [Paris Elite Institute of Technology 
 
 我是上海交通大学巴黎卓越工程师学院的本科一年级学生，接受以数学、物理与计算机为基础的法语工程师教育。
 
-My main interest is in **large language models** — in particular, evaluating how LLM agents behave and fail. Current work in progress:
+My main interest is in **large language models** — in particular, evaluating how LLM agents behave and fail. Two preprints from this line of work are available on Research Square (see [Publications](/publications/)), and current work in progress includes:
 
 * Building counterfactual benchmarks to study how LLM agents recover from ambiguous tool outcomes
 * Applying mutation testing and state-oracle calibration to evaluate the reliability of software-agent benchmarks

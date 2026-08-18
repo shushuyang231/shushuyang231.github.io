@@ -36,3 +36,9 @@ Projects | 项目
 * [Ambiguous Tool Outcomes Benchmark](https://github.com/shushuyang231/ambiguous-tool-outcomes-benchmark) — counterfactual benchmark for LLM agent recovery from ambiguous tool outcomes
 * [Side-Effect Calibration Study](https://github.com/shushuyang231/side-effect-calibration-study) — mutation testing of task-scoped state oracles in software-agent benchmarks
 * [Schema Order Robustness](https://github.com/shushuyang231/schema-order-robustness) — reproducible study of JSON Schema serialization-order robustness in black-box LLM generation
+
+Publications | 论文
+======
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
