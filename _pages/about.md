@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "关于我 (About Me)"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,19 +8,26 @@ redirect_from:
   - /about.html
 ---
 
-I am a **first year undergraduate** from [SJTU Paris Elite Institute of Technology](https://speit.sjtu.edu.cn/) ,[Shanghai Jiaotong University](https://www.sjtu.edu.cn/) majoring in primary French and a bit math&physics.
-Ce site web sert de plateforme pour documenter mes projets de recherche, mes publications (le cas échéant) et mes activités universitaires, offrant un aperçu de mes domaines d'expertise et de mes contributions.
+I am a **first-year undergraduate** at the [Paris Elite Institute of Technology (SPEIT)](https://speit.sjtu.edu.cn/), [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/), following a French engineering curriculum with foundations in mathematics, physics, and computer science.
 
-如果您对我的学习经历感兴趣，或者有任何建议，欢迎通过侧边栏的联系方式与我交流。
+My research interests span **LLM evaluation** and **empirical software engineering**. I am currently working on:
 
-## 🏛️ 教育背景 (Education)
+* Building counterfactual benchmarks to study how LLM agents recover from ambiguous tool outcomes
+* Applying mutation testing and state-oracle calibration to evaluate the reliability of software-agent benchmarks
+* Investigating how JSON Schema serialization order affects black-box LLM generation
+* Applying Bayesian N-of-1 statistical methods to individual-level estimation problems
 
-* **本科 (Undergraduate)** - [上海交通大学 (SJTU)](https://www.sjtu.edu.cn/)
-    * 学院：[巴黎卓越工程师学院 (SPEIT)](https://speit.sjtu.edu.cn/)
-    * 时间：2025 - 至今
+This site documents my research projects and academic activities. If you are interested in my work or have any suggestions, feel free to reach out via the links in the sidebar.
 
- ## 🌟 兴趣领域 (Research Interests)
+## Education
 
-* vocaloid以及so-vits-svc音乐制作相关
-* 部分通晓vibe coding
-* 战前（时）日本，冷战时期苏联，欧洲，朝鲜，美国相关勋赏
+* **B.Eng.** — [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/)
+  * School: [Paris Elite Institute of Technology (SPEIT)](https://speit.sjtu.edu.cn/)
+  * 2025 – Present, Shanghai, China
+
+## Research Interests
+
+* LLM agent evaluation and benchmarking
+* Empirical software engineering (mutation testing, oracle calibration)
+* Robustness of LLM-generated structured outputs
+* Bayesian N-of-1 modeling for personalized estimation
