@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Sun Shengyao | 孙圣尧"
 title_separator          : "-"
 name                     : &name "Sun Shengyao"
-description              : &description "Academic homepage of Sun Shengyao — undergraduate researcher at SJTU SPEIT, exploring LLM evaluation and empirical software engineering."
+description              : &description "Academic homepage of Sun Shengyao — undergraduate at SJTU SPEIT, interested in LLM evaluation, embodied intelligence, and robotics."
 url                      : https://shushuyang231.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile2.png"
   name             : "孙圣尧 (Sun Shengyao)"
   pronouns         : "he/his"
-  bio              : "First-year undergraduate at SJTU SPEIT · LLM evaluation & empirical software engineering"
+  bio              : "First-year undergraduate at SJTU SPEIT · LLM evaluation · embodied intelligence & robotics"
   location         : "Shanghai, China"
   employer         : "Shanghai Jiao Tong University"
   uri              : # URL
@@ -38,7 +38,7 @@ author:
   googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # URL
+  orcid            : https://orcid.org/0009-0008-9175-8226
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL

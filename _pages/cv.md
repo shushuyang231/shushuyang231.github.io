@@ -9,29 +9,29 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+Education | 教育背景
 ======
-* B.Eng. in Engineering, Shanghai Jiao Tong University, 2025 – Present
-  * Paris Elite Institute of Technology (SPEIT)
+* B.Eng. in Engineering, Shanghai Jiao Tong University（上海交通大学）， 2025 – Present
+  * Paris Elite Institute of Technology (SPEIT)（巴黎卓越工程师学院）
   * French engineering curriculum: mathematics, physics, and computer science
 
-Research Interests
+Research Interests | 研究方向
 ======
-* LLM agent evaluation and benchmarking
-* Empirical software engineering (mutation testing, state-oracle calibration)
-* Robustness of LLM-generated structured outputs (JSON Schema serialization order)
-* Bayesian N-of-1 modeling for personalized estimation
+* LLM agent evaluation and benchmarking（LLM 智能体评测）
+* Empirical software engineering: mutation testing, state-oracle calibration（实证软件工程）
+* Robustness of LLM-generated structured outputs（结构化输出鲁棒性）
+* Embodied intelligence and robotics（具身智能与机器人学）
 
-Skills
+Skills | 技能
 ======
 * Programming
   * Python, Kotlin (Android / Jetpack Compose), TypeScript (React / Vite), HTML/CSS
 * Research methods
-  * LLM benchmark design, mutation testing, Bayesian estimation
+  * LLM benchmark design, mutation testing
 * Tools
   * Git, Supabase, Android Studio, Vite
 
-Projects
+Projects | 项目
 ======
 * [Ambiguous Tool Outcomes Benchmark](https://github.com/shushuyang231/ambiguous-tool-outcomes-benchmark) — counterfactual benchmark for LLM agent recovery from ambiguous tool outcomes
 * [Side-Effect Calibration Study](https://github.com/shushuyang231/side-effect-calibration-study) — mutation testing of task-scoped state oracles in software-agent benchmarks
