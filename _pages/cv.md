@@ -23,7 +23,9 @@ Areas of Interest | 兴趣领域
 
 Skills | 技能
 ======
-* Python（初级 / beginner level）
+* Programming: Python — basic working proficiency（具备基础实用能力）
+* Research: empirical experiment design and reproducible research workflows（实证实验设计与可复现研究流程）
+* Tools: Git / GitHub
 
 Projects | 项目
 ======
