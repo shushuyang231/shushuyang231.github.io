@@ -12,7 +12,7 @@ I am an **incoming second-year undergraduate** at the [Paris Elite Institute of 
 
 我是上海交通大学巴黎卓越工程师学院即将进入二年级的本科生，接受以数学、物理与计算机为基础的法语工程师教育。
 
-My prior research experience has been in **LLM and software-agent evaluation** — in particular, studying how LLM agents behave and fail. Two preprints from this line of work are available on Research Square (see [Publications](/publications/)). I am now actively expanding toward **embodied intelligence and robotics**, while continuing to explore AI evaluation. Current work in progress includes:
+My prior research experience has been in **LLM and software-agent evaluation** — in particular, studying how LLM agents behave and fail. Three preprints from this line of work are available on Research Square (see [Publications](/publications/)). I am now actively expanding toward **embodied intelligence and robotics**, while continuing to explore AI evaluation. Current work in progress includes:
 
 * Building counterfactual benchmarks to study how LLM agents recover from ambiguous tool outcomes
 * Applying mutation testing and state-oracle calibration to evaluate the reliability of software-agent benchmarks
