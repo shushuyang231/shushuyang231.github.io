@@ -25,6 +25,7 @@ Skills | 技能
 ======
 * Python — basic working proficiency（具备基础实用能力）
 * AI-native workflows — comfortable driving AI-assisted research and engineering workflows（AI 原生工作流）
+* French — early B1（法语初级 B1 水平）
 
 Projects | 项目
 ======
