@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Mobile responsiveness fixes for academicpages template
+   Loaded after main.css, overrides with higher specificity
+   ========================================================================== */
+
+/* ---- Breakpoint reference (from _themes.scss):
+   $small: 600px, $medium: 768px, $large: 925px, $x-large: 1280px
+   $sidebar-screen-min-width: 1024px
+   ---- */
+
+/* ========================================================================
+   1. Viewport & root sizing
+   ======================================================================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px !important; /* slightly smaller than 16px default to gain space */
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+/* ========================================================================
+   2. Masthead / Navigation — prevent overflow on narrow screens
+   ======================================================================== */
+@media (max-width: 600px) {
+  .masthead {
+    height: auto !important;
+    position: fixed !important;
+  }
+
+  .masthead__inner-wrap {
+    padding: 0.4em 0.6em !important;
+  }
+
+  .greedy-nav {
+    min-width: 0 !important; /* override 250px min-width that causes horizontal scroll */
+  }
+
+  .greedy-nav .visible-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100%;
+  }
+
+  .greedy-nav .visible-links li {
+    display: inline-block !important; /* override table-cell */
+    white-space: nowrap;
+  }
+
+  .greedy-nav .visible-links li:first-child a {
+    font-size: 0.9em !important;
+    margin-left: 0 !important;
+    padding-right: 0.5em !important;
+  }
+
+  .greedy-nav .visible-links .masthead__menu-item a {
+    margin: 0 0.4rem !important;
+    padding: 0.35rem 0 !important;
+    font-size: 0.85em !important;
+  }
+
+  /* Shrink theme toggle */
+  .greedy-nav #theme-toggle a {
+    width: auto !important;
+  }
+}
+
+/* ========================================================================
+   3. Body padding — masthead is shorter on mobile, reduce top padding
+   ======================================================================== */
+@media (max-width: 600px) {
+  body {
+    padding-top: 55px !important; /* masthead is shorter on mobile */
+    padding-bottom: 6em !important;
+  }
+}
+
+/* ========================================================================
+   4. Sidebar / Author profile — fix avatar cropping & cramped layout
+   On mobile (< 1024px), sidebar is NOT fixed; it flows inline.
+   The avatar uses table-cell with width:36px, which crops the circular image.
+   ======================================================================== */
+@media (max-width: 1023px) {
+  .sidebar {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-top: 0 !important;
+    margin-top: 0.5em !important;
+  }
+
+  .sidebar.sticky {
+    position: static !important;
+  }
+
+  /* Stack avatar + content vertically instead of table-cell side-by-side */
+  .sidebar > div[itemtype] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+  }
+
+  .author__avatar {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 auto 0.5em auto !important;
+    text-align: center !important;
+  }
+
+  .author__avatar img {
+    width: 80px !important;
+    max-width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .author__content {
+    display: block !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+  }
+
+  .author__content .author__name {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.2em !important;
+  }
+
+  .author__content .author__bio {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.5em !important;
+    font-size: 0.85em !important;
+  }
+
+  /* Follow button + links: make full-width, tappable */
+  .author__urls-wrapper {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 0.3em !important;
+  }
+
+  .author__urls-wrapper > button {
+    margin: 0 auto 0.3em auto !important;
+  }
+
+  .author__urls {
+    position: static !important;
+    display: block !important; /* always visible, or toggle via JS */
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+
+  .author__urls:before,
+  .author__urls:after {
+    display: none !important;
+  }
+
+  .author__urls li {
+    white-space: normal !important;
+  }
+
+  .author__urls li a {
+    font-size: 0.8em !important;
+    padding: 0.2em 0 !important;
+  }
+}
+
+/* ========================================================================
+   5. Main content area — give breathing room on mobile
+   ======================================================================== */
+@media (max-width: 768px) {
+  #main {
+    margin-top: 1em !important;
+    padding-left: 1.2em !important;
+    padding-right: 1.2em !important;
+  }
+}
+
+@media (max-width: 400px) {
+  #main {
+    padding-left: 0.8em !important;
+    padding-right: 0.8em !important;
+  }
+}
+
+/* ========================================================================
+   6. Page headings & content — prevent overflow, tighten spacing
+   ======================================================================== */
+@media (max-width: 600px) {
+  .page__title {
+    font-size: 1.4em !important;
+    line-height: 1.2 !important;
+  }
+
+  .page__content h1 {
+    font-size: 1.4em !important;
+  }
+
+  .page__content h2 {
+    font-size: 1.15em !important;
+    margin-top: 1.2em !important;
+    margin-bottom: 0.4em !important;
+  }
+
+  .page__content h3 {
+    font-size: 1em !important;
+  }
+
+  .page__content p,
+  .page__content li {
+    font-size: 0.95em !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Prevent long URLs/words from overflowing */
+  .page__content {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+  }
+
+  .page__content a {
+    overflow-wrap: break-word !important;
+  }
+
+  /* Code blocks: allow horizontal scroll instead of page overflow */
+  .page__content pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+
+  .page__content table {
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ========================================================================
+   7. CV page header — responsive on mobile
+   ======================================================================== */
+@media (max-width: 600px) {
+  .cv-header .cv-name {
+    font-size: 1.5em !important;
+  }
+
+  .cv-header .cv-tagline {
+    font-size: 0.8em !important;
+  }
+
+  .cv-header .cv-contact {
+    font-size: 0.75em !important;
+    flex-direction: column !important;
+    gap: 0.2em !important;
+  }
+
+  .cv-header .cv-contact .cv-sep {
+    display: none !important;
+  }
+
+  .cv-publications .cv-pub-item {
+    padding-left: 0.6em !important;
+  }
+
+  .cv-pub-title {
+    font-size: 0.95em !important;
+  }
+
+  .cv-pub-meta {
+    font-size: 0.8em !important;
+  }
+}
+
+/* ========================================================================
+   8. Footer — tighten on mobile
+   ======================================================================== */
+@media (max-width: 600px) {
+  .page__footer {
+    padding: 1em 0.5em !important;
+  }
+
+  .page__footer footer {
+    padding: 0 !important;
+  }
+
+  .page__footer .fas,
+  .page__footer .fab {
+    margin-right: 0.2em !important;
+  }
+}
+
+/* ========================================================================
+   9. Archive / Publications list pages
+   ======================================================================== */
+@media (max-width: 600px) {
+  .archive__item-title {
+    font-size: 1em !important;
+  }
+
+  .archive__item-excerpt {
+    font-size: 0.85em !important;
+    line-height: 1.4 !important;
+  }
+
+  .grid__wrapper {
+    margin: 0 !important;
+  }
+}
+
+/* ========================================================================
+   10. Prevent horizontal scroll globally on mobile
+   ======================================================================== */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
