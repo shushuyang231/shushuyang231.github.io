@@ -14,13 +14,13 @@ redirect_from:
   <h1 class="cv-name">{{ site.author.name }}</h1>
   <p class="cv-tagline">Incoming second-year undergraduate · LLM &amp; software-agent evaluation · interested in embodied intelligence &amp; robotics</p>
   <div class="cv-contact">
-    <a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true"></i> {{ site.author.email }}</a>
+    <a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ site.author.email }}</a>
     <span class="cv-sep">·</span>
-    <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github" aria-hidden="true"></i> github.com/{{ site.author.github }}</a>
+    <a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> github.com/{{ site.author.github }}</a>
     <span class="cv-sep">·</span>
-    <a href="{{ site.author.orcid }}"><i class="fa fa-id-card" aria-hidden="true"></i> ORCID</a>
+    <a href="{{ site.author.orcid }}"><i class="fas fa-id-card" aria-hidden="true"></i> ORCID</a>
     <span class="cv-sep">·</span>
-    <span><i class="fa fa-map-marker-alt" aria-hidden="true"></i> {{ site.author.location }}</span>
+    <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ site.author.location }}</span>
   </div>
 </div>
 
@@ -67,7 +67,7 @@ Publications | 论文
 <!-- ====== EXPORT BUTTON ====== -->
 <div class="cv-print-btn">
   <button onclick="window.print()" class="btn btn--primary">
-    <i class="fa fa-file-pdf" aria-hidden="true"></i> Export as PDF
+    <i class="fas fa-file-pdf" aria-hidden="true"></i> Export as PDF
   </button>
 </div>
 
