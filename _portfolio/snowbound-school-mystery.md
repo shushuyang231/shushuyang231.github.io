@@ -9,11 +9,11 @@ order: 6
 
 **游戏特点：**
 - 流程约 15 分钟，3 个分支结局（澪线、千夏线、灯线）
-- 1920×1080 分辨率，AI 生成背景、角色立绘与关键线索 CG
-- 占位音乐与音效，可自行替换
+- 1920×1080 分辨率，背景、角色立绘与关键线索 CG
+- 配有 BGM 与音效
 
 **主要角色：** 若槻诗音（死者）、白石澪、久原千夏、花泽灯
 
 **Tech:** Ren'Py (Python)
 
-[View on GitHub](https://github.com/shushuyang231/snowbound-school-mystery)
+[Play online](https://modelscope.cn/studios/shushuyang231/snowbound-school-mystery/summary) | [View on GitHub](https://github.com/shushuyang231/snowbound-school-mystery)
