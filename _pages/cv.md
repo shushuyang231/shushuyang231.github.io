@@ -51,6 +51,11 @@ Projects | 项目
 * [Side-Effect Calibration Study](https://github.com/shushuyang231/side-effect-calibration-study) — mutation testing of task-scoped state oracles in software-agent benchmarks
 * [Schema Order Robustness](https://github.com/shushuyang231/schema-order-robustness) — reproducible study of JSON Schema serialization-order robustness in black-box LLM generation
 
+Other Projects | 其他项目
+======
+* [VEX Robotics Programming](https://github.com/shushuyang231/vex-robotics) — VEX V5 robot control code; served as team lead programmer, won 2nd Prize at SJTU campus competition
+* [Snowbound School Mystery（雪闭校园）](https://github.com/shushuyang231/snowbound-school-mystery) — Ren'Py suspense visual novel with 3 branching routes; [play online](https://modelscope.cn/studios/shushuyang231/snowbound-school-mystery/summary)
+
 Publications | 论文
 ======
 <div class="cv-publications">
