@@ -35,3 +35,7 @@ I am particularly interested in bringing prior AI and computational research exp
 ## Beyond Research | 研究之外
 
 Outside of academics, I enjoy vocaloid music production (so-vits-svc) and studying historical orders and decorations (phaleristics). 业余时间喜欢 vocaloid 音乐制作与历史勋赏研究。
+
+I also build things outside of research:
+* **[VEX Robotics](https://github.com/shushuyang231/vex-robotics)** — served as the team's lead programmer for VEX V5 robot control code; the team won 2nd Prize at the SJTU campus competition
+* **[Snowbound School Mystery（雪闭校园）](https://github.com/shushuyang231/snowbound-school-mystery)** — a Ren'Py suspense visual novel set in a snowbound school, with 3 branching routes; [play online](https://modelscope.cn/studios/shushuyang231/snowbound-school-mystery/summary)
